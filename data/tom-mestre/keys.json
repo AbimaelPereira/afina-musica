@@ -1,0 +1,17 @@
+[
+    { "key": "do", "file": "do" },
+    { "key": "sol", "file": "sol" },
+    { "key": "re", "file": "re" },
+    { "key": "la", "file": "la" },
+    { "key": "mi", "file": "mi" },
+    { "key": "si", "file": "si" },
+    { "key": "fa#", "file": "fa#" },
+    { "key": "do#", "file": "do#" },
+    { "key": "fa", "file": "fa" },
+    { "key": "sib", "file": "sib" },
+    { "key": "mib", "file": "mib" },
+    { "key": "lab", "file": "lab" },
+    { "key": "reb", "file": "reb" },
+    { "key": "solb", "file": "solb" },
+    { "key": "dob", "file": "dob" }
+]

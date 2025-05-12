@@ -1,0 +1,17 @@
+[
+    { "note": "do1", "file": "do1", "correctNote": "do" },
+    { "note": "re1", "file": "re1", "correctNote": "re" },
+    { "note": "mi1", "file": "mi1", "correctNote": "mi" },
+    { "note": "fa1", "file": "fa1", "correctNote": "fa" },
+    { "note": "sol1", "file": "sol1", "correctNote": "sol" },
+    { "note": "la1", "file": "la1", "correctNote": "la" },
+    { "note": "si1", "file": "si1", "correctNote": "si" },
+    { "note": "do2", "file": "do2", "correctNote": "do" },
+    { "note": "re2", "file": "re2", "correctNote": "re" },
+    { "note": "mi2", "file": "mi2", "correctNote": "mi" },
+    { "note": "fa2", "file": "fa2", "correctNote": "fa" },
+    { "note": "sol2", "file": "sol2", "correctNote": "sol" },
+    { "note": "la2", "file": "la2", "correctNote": "la" },
+    { "note": "si2", "file": "si2", "correctNote": "si" },
+    { "note": "do3", "file": "do3", "correctNote": "do" }
+]  
