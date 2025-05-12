@@ -1,6 +1,12 @@
 import Logo from "@/components/Logo/Logo";
 import Link from "next/link";
 
+// metadata
+export const metadata = {
+  title: "AfinaMusica",
+  description: "Afine sua mente com jogos musicais interativos!",
+};
+
 export default function Home() {
   return (
     <main className="align-center flex flex-col items-center justify-between">

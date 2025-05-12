@@ -5,6 +5,12 @@ import PlayGame from "@/components/PlayGame/PlayGame";
 import SelectClef from "@/components/SelectClef/SelectClef";
 import { useState } from "react";
 
+// metadata
+export const metadata = {
+    title: "Nota Certa",
+    description: "Desafie sua leitura das notas no pentagrama!",
+};
+
 export default function NotaCerta() {
     const [selectedClaf, setSelectedClaf] = useState<"treble-clef" | "bass-clef" | "bass-clef-octave-down" | null>(null);
 
