@@ -16,7 +16,7 @@ export default async function PlayGame({
   }: {
     params: { clef: string }
   }) {
-    const { clef } = await params  
+    const { clef } = params  
 
     if (!validClefs.includes(clef as Clef)) {
         redirect('/')
