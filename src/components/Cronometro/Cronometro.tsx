@@ -35,4 +35,6 @@ const Cronometro = forwardRef<CronometroHandle>((_, ref) => {
     )
 })
 
+Cronometro.displayName = "Cronometro";
+
 export default Cronometro
