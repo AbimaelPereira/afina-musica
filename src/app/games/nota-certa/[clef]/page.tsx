@@ -3,12 +3,6 @@ import { redirect } from "next/navigation"
 import { readJSON, shuffleArray } from "@lib/jsonHandler"
 import PlayGameClient from "./PlayGameClient"
 
-// metadata
-export const metadata = {
-  title: "Nota Certa",
-  description: "Desafie sua leitura das notas no pentagrama!",
-}
-
 const validClefs = ["treble-clef", "bass-clef", "bass-clef-octave-down"] as const
 type Clef = typeof validClefs[number]
 
