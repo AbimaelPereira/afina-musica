@@ -3,10 +3,10 @@
 import Cronometro, { CronometroHandle } from "@/components/Cronometro/Cronometro"
 import Logo from "@/components/Logo/Logo"
 import { playSound } from "@lib/utils"
+import Image from "next/image"
 import { useRef, useState } from "react"
 
 type Props = {
-    clef: string
     data: any[]
     svgPath: string
 }
@@ -21,7 +21,7 @@ const btns = [
     { name: "Si", value: "si" },
 ]
 
-export default function PlayGameClient({ clef, data, svgPath }: Props) {
+export default function PlayGameClient({ data, svgPath }: Props) {
     const [currentIndexQuestion, setCurrentIndexQuestion] = useState(0)
     const [stateGame, setStateGame] = useState("playing")
     const [tempoFinal, setTempoFinal] = useState(0)
@@ -61,9 +61,11 @@ export default function PlayGameClient({ clef, data, svgPath }: Props) {
                 </div>
 
                 <div className="flex flex-col items-center">
-                    <img
+                    <Image
                         src={`${svgPath}/${data[currentIndexQuestion].file}.svg`}
                         alt={data[currentIndexQuestion].key}
+                        width={256}
+                        height={256}
                         className="w-64 h-44 object-fit"
                     />
                 </div>

@@ -1,7 +1,6 @@
 // app/play/[clef]/page.tsx
 import { redirect } from "next/navigation"
 import { readJSON, shuffleArray } from "@lib/jsonHandler"
-import { playSound } from "@lib/utils"
 import PlayGameClient from "./PlayGameClient"
 
 const validClefs = ["treble-clef", "bass-clef", "bass-clef-octave-down"] as const
@@ -26,5 +25,5 @@ export default async function PlayGame({
     const data = await loadDataGame(`nota-certa/${clef}.json`)
     const svgPath = "/nota-certa/" + clef
 
-    return <PlayGameClient clef={clef} data={data} svgPath={svgPath} />
+    return <PlayGameClient data={data} svgPath={svgPath} />
 }
