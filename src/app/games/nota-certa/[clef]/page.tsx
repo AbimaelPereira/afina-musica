@@ -11,14 +11,10 @@ async function loadDataGame(fileName: string) {
   return shuffleArray(data)
 }
 
-export default async function PlayGame({
-  params,
-}: {
-  params: { clef: "treble-clef" | "bass-clef" | "bass-clef-octave-down" };
-}) {
-  const { clef } = params
+export default async function PlayGame({ params }) {
+  const { clef } = params as { clef: Clef }
 
-  if (!validClefs.includes(clef as Clef)) {
+  if (!validClefs.includes(clef)) {
     redirect('/')
   }
 
