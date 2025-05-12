@@ -1,5 +1,6 @@
 'use client'
 
+import { playSound } from '@lib/utils'
 import { redirect } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
@@ -17,6 +18,7 @@ export default function PlayGame({ clef, gameRoute }: PlayGameProps) {
             const timer = setTimeout(() => setCount(prev => prev - 1), 1000)
             return () => clearTimeout(timer)
         } else if (count === 0) {
+            playSound('/sounds/init.wav')
             const goTimer = setTimeout(() => {
                 redirect(`/games/${gameRoute}/${clef}`)
             }, 1000)

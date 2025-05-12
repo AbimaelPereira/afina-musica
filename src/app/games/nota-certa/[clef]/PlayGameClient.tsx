@@ -106,7 +106,7 @@ export default function PlayGameClient({ data, svgPath }: Props) {
             </p>
             <Link
                 href="/games/nota-certa"
-                className="w-full max-w-2xs mt-4 cursor-pointer h-10 rounded-xl bg-primary text-white text-lg font-semibold shadow-md"
+                className="w-full flex items-center justify-center max-w-2xs mt-4 cursor-pointer h-10 rounded-xl bg-primary text-white text-lg font-semibold shadow-md"
             >
                 Jogar Novamente
             </Link>
