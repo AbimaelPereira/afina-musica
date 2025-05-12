@@ -6,12 +6,6 @@ import PlayGameClient from "./PlayGameClient"
 const validClefs = ["treble-clef", "bass-clef", "bass-clef-octave-down"] as const
 type Clef = typeof validClefs[number]
 
-interface PageProps {
-  params: {
-    clef: string
-  }
-}
-
 async function loadDataGame(fileName: string) {
   const data = await readJSON(fileName)
   return shuffleArray(data)
