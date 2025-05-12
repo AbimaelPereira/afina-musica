@@ -17,7 +17,11 @@ async function loadDataGame(fileName: string) {
   return shuffleArray(data)
 }
 
-export default async function PlayGame({ params }: PageProps) {
+export default async function PlayGame({
+  params,
+}: {
+  params: { clef: "treble-clef" | "bass-clef" | "bass-clef-octave-down" };
+}) {
   const { clef } = params
 
   if (!validClefs.includes(clef as Clef)) {
