@@ -4,6 +4,7 @@ import Cronometro, { CronometroHandle } from "@/components/Cronometro/Cronometro
 import Logo from "@/components/Logo/Logo"
 import { playSound } from "@lib/utils"
 import Image from "next/image"
+import Link from "next/link"
 import { useRef, useState } from "react"
 
 type Props = {
@@ -103,6 +104,12 @@ export default function PlayGameClient({ data, svgPath }: Props) {
             <p className="text-center mb-2 text-lg">
                 Seu tempo: {tempoFinal}s
             </p>
+            <Link
+                href="/games/nota-certa"
+                className="w-full max-w-2xs mt-4 cursor-pointer h-10 rounded-xl bg-primary text-white text-lg font-semibold shadow-md"
+            >
+                Jogar Novamente
+            </Link>
         </main>
     )
 }
