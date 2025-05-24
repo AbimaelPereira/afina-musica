@@ -26,6 +26,7 @@ export default function PlayGameClient({ data, svgPath }: Props) {
     const [currentIndexQuestion, setCurrentIndexQuestion] = useState(0)
     const [stateGame, setStateGame] = useState("playing")
     const [tempoFinal, setTempoFinal] = useState(0)
+    const [showLink, setShowLink] = useState(false)
     const cronometroRef = useRef<CronometroHandle>(null)
 
     const handleClick = (value: string) => () => {
@@ -92,6 +93,12 @@ export default function PlayGameClient({ data, svgPath }: Props) {
         )
     }
 
+    if (stateGame === "finished") {
+        setTimeout(() => {
+            setShowLink(true)
+        }, 2000)
+    }
+
     return (
         <main className="align-center flex flex-col items-center h-min-screen">
             <Logo size="md" />
@@ -104,12 +111,18 @@ export default function PlayGameClient({ data, svgPath }: Props) {
             <p className="text-center mb-2 text-lg">
                 Seu tempo: {tempoFinal}s
             </p>
-            <Link
-                href="/games/nota-certa"
-                className="w-full flex items-center justify-center max-w-2xs mt-4 cursor-pointer h-10 rounded-xl bg-primary text-white text-lg font-semibold shadow-md"
-            >
-                Jogar Novamente
-            </Link>
+            {/* data atual */}
+            <p className="text-center mb-2 text-lg">
+                Data: {new Date().toLocaleDateString("pt-BR")}
+            </p>
+            {showLink ? (
+                <Link
+                    href="/games/nota-certa"
+                    className="w-full flex items-center justify-center max-w-2xs mt-4 cursor-pointer h-10 rounded-xl bg-primary text-white text-lg font-semibold shadow-md"
+                >
+                    Jogar Novamente
+                </Link>
+            ) : ""}
         </main>
     )
 }
